@@ -4,7 +4,7 @@ import { useWeb3React } from '@web3-react/core'
 import { allLanguages } from 'constants/localisation/languageCodes'
 import { LanguageContext } from 'hooks/LanguageContext'
 import useTheme from 'hooks/useTheme'
-import useDustPrice from 'hooks/useDustPrice'
+import useBnbPrice from 'hooks/useBnbPrice'
 import useGetLocalProfile from 'hooks/useGetLocalProfile'
 import useAuth from 'hooks/useAuth'
 import links from './config'
@@ -14,7 +14,7 @@ const Menu: React.FC = (props) => {
   const { login, logout } = useAuth()
   const { selectedLanguage, setSelectedLanguage } = useContext(LanguageContext)
   const { isDark, toggleTheme } = useTheme()
-  const dustPriceUsd = useDustPrice()
+  const dustPriceUsd = useBnbPrice()
   const profile = useGetLocalProfile()
 
   return (
