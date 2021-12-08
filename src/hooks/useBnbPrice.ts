@@ -9,7 +9,7 @@ const web3 = getWeb3NoAccount()
 const BnbUSDTPairAddress = '0xed790f615f0dfe112828eb1c8cec9d1624dbd184'
 const BnbUsdtPairContract = new web3.eth.Contract(UniV2LPABI as unknown as AbiItem, BnbUSDTPairAddress)
 
-const BnbBusdPairAddress = '0xed790f615f0dfe112828eb1c8cec9d1624dbd184'
+const DustBnbPairAddress = '0xed790f615f0dfe112828eb1c8cec9d1624dbd184'
 const DustBnbContract = new web3.eth.Contract(UniV2LPABI as unknown as AbiItem, DustBnbPairAddress)
 
 const useBnbPrice = () => {
