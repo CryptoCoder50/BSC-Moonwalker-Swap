@@ -10,7 +10,7 @@ const BnbUSDTPairAddress = '0xed790f615f0dfe112828eb1c8cec9d1624dbd184'
 const BnbUsdtPairContract = new web3.eth.Contract(UniV2LPABI as unknown as AbiItem, BnbUSDTPairAddress)
 
 const BnbBusdPairAddress = '0xed790f615f0dfe112828eb1c8cec9d1624dbd184'
-const BnbBusdContract = new web3.eth.Contract(UniV2LPABI as unknown as AbiItem, BnbBusdPairAddress)
+const DustBnbContract = new web3.eth.Contract(UniV2LPABI as unknown as AbiItem, DustBnbPairAddress)
 
 const useBnbPrice = () => {
   const [price, setPrice] = useState(0)
@@ -21,9 +21,9 @@ const useBnbPrice = () => {
       const bnbObj = await BnbUsdtPairContract.methods.getReserves().call();
       if (!new BigNumber(bnbObj._reserve1).eq(new BigNumber(0))) {
         const bnbPrice = new BigNumber(bnbObj._reserve0).div(bnbObj._reserve1).times(1e12)
-        const busdObj = await BnbBusdPairContract.methods.getReserves().call();
-        if (!new BigNumber(busdObj._reserve1).eq(new BigNumber(0))) {
-          const busdPrice = new BigNumber(busdObj._reserve0).div(bnbObj._reserve1).times(bnbPrice)
+        const busdObj = await DustBnbPairContract.methods.getReserves().call();
+        if (!new BigNumber(dustObj._reserve1).eq(new BigNumber(0))) {
+          const dustPrice = new BigNumber(dustObj._reserve0).div(bnbObj._reserve1).times(bnbPrice)
           if (!bnbPrice.isEqualTo(price)) {
             setPrice(bnbPrice.toNumber())
           }
@@ -35,7 +35,7 @@ const useBnbPrice = () => {
   }, [price])
 
   useEffect(() => {
-    if (BnbUsdtPairContract && BnbBusdPairContract) {
+    if (BnbUsdtPairContract && DustBnbPairContract) {
       fetchBalance()
     }
   }, [setPrice, fetchBalance, block])
