@@ -9,23 +9,23 @@ const web3 = getWeb3NoAccount()
 const BnbUSDTPairAddress = '0xed790f615f0dfe112828eb1c8cec9d1624dbd184'
 const BnbUsdtPairContract = new web3.eth.Contract(UniV2LPABI as unknown as AbiItem, BnbUSDTPairAddress)
 
-const DustBnbPairAddress = '0xed790f615f0dfe112828eb1c8cec9d1624dbd184'
-const DustBnbPairContract = new web3.eth.Contract(UniV2LPABI as unknown as AbiItem, DustBnbPairAddress)
+const BnbBusdPairAddress = '0xed790f615f0dfe112828eb1c8cec9d1624dbd184'
+const BnbBusdContract = new web3.eth.Contract(UniV2LPABI as unknown as AbiItem, BnbBusdPairAddress)
 
-const useDustPrice = () => {
+const useBnbPrice = () => {
   const [price, setPrice] = useState(0)
   const block = useBlock()
 
   const fetchBalance = useCallback(async () => {
     try {
       const bnbObj = await BnbUsdtPairContract.methods.getReserves().call();
-      if (!new BigNumber(fantomObj._reserve1).eq(new BigNumber(0))) {
+      if (!new BigNumber(bnbObj._reserve1).eq(new BigNumber(0))) {
         const bnbPrice = new BigNumber(bnbObj._reserve0).div(bnbObj._reserve1).times(1e12)
-        const dustObj = await DustBnbPairContract.methods.getReserves().call();
-        if (!new BigNumber(dustObj._reserve1).eq(new BigNumber(0))) {
-          const dustPrice = new BigNumber(dustObj._reserve0).div(dustObj._reserve1).times(bnbPrice)
-          if (!dustPrice.isEqualTo(price)) {
-            setPrice(dustPrice.toNumber())
+        const busdObj = await BnbBusdPairContract.methods.getReserves().call();
+        if (!new BigNumber(bnbObj._reserve1).eq(new BigNumber(0))) {
+          const bnbPrice = new BigNumber(bnbObj._reserve0).div(bnbObj._reserve1).times(busdPrice)
+          if (!bnbPrice.isEqualTo(price)) {
+            setPrice(bnbPrice.toNumber())
           }
         }
       }
@@ -35,7 +35,7 @@ const useDustPrice = () => {
   }, [price])
 
   useEffect(() => {
-    if (BnbUsdtPairContract && DustBnbPairContract) {
+    if (BnbUsdtPairContract && BnbBusdPairContract) {
       fetchBalance()
     }
   }, [setPrice, fetchBalance, block])
