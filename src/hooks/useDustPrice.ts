@@ -12,7 +12,7 @@ const BnbUsdtPairContract = new web3.eth.Contract(UniV2LPABI as unknown as AbiIt
 const DustBnbPairAddress = '0xed790f615f0dfe112828eb1c8cec9d1624dbd184'
 const DustBnbPairContract = new web3.eth.Contract(UniV2LPABI as unknown as AbiItem, DustBnbPairAddress)
 
-const useBnbPrice = () => {
+const useDustPrice = () => {
   const [price, setPrice] = useState(0)
   const block = useBlock()
 
