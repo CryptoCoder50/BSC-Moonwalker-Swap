@@ -23,7 +23,7 @@ const useBnbPrice = () => {
         const bnbPrice = new BigNumber(bnbObj._reserve0).div(bnbObj._reserve1).times(1e12)
         const busdObj = await BnbBusdPairContract.methods.getReserves().call();
         if (!new BigNumber(busdObj._reserve1).eq(new BigNumber(0))) {
-          const bnbPrice = new BigNumber(bnbObj._reserve0).div(bnbObj._reserve1).times(busdPrice)
+          const busdPrice = new BigNumber(busdObj._reserve0).div(bnbObj._reserve1).times(bnbPrice)
           if (!bnbPrice.isEqualTo(price)) {
             setPrice(bnbPrice.toNumber())
           }
@@ -43,4 +43,4 @@ const useBnbPrice = () => {
   return price
 }
 
-export default useDustPrice
+export default useBnbPrice
