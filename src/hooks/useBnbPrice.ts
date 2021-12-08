@@ -21,7 +21,7 @@ const useBnbPrice = () => {
       const bnbObj = await BnbUsdtPairContract.methods.getReserves().call();
       if (!new BigNumber(bnbObj._reserve1).eq(new BigNumber(0))) {
         const bnbPrice = new BigNumber(bnbObj._reserve0).div(bnbObj._reserve1).times(1e12)
-        const busdObj = await DustBnbPairContract.methods.getReserves().call();
+        const dustObj = await DustBnbPairContract.methods.getReserves().call();
         if (!new BigNumber(dustObj._reserve1).eq(new BigNumber(0))) {
           const dustPrice = new BigNumber(dustObj._reserve0).div(bnbObj._reserve1).times(bnbPrice)
           if (!bnbPrice.isEqualTo(price)) {
@@ -35,7 +35,7 @@ const useBnbPrice = () => {
   }, [price])
 
   useEffect(() => {
-    if (BnbUsdtPairContract && DustBnbPairContract) {
+    if (BnbUsdtPairContract) {
       fetchBalance()
     }
   }, [setPrice, fetchBalance, block])
