@@ -12,7 +12,7 @@ type ApiResponse = {
   }
 }
 
-const api = 'https://api.pancakeswap.info/api/tokens'
+const api = 'https://moonwalker.network/bsc-api-prices'
 
 const useGetPriceData = () => {
   const [data, setData] = useState<ApiResponse | null>(null)
