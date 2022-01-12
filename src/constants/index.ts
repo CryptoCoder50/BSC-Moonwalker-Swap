@@ -1,6 +1,6 @@
 import { ChainId, JSBI, Percent, Token, WETH } from 'moonwalkerswap-sdk-v2'
 
-export const ROUTER_ADDRESS = '0xa62dd0bdae760a3b5a43186e6fd2c07b0525c0d9'
+export const ROUTER_ADDRESS = '0x7decff86a956f27a4fe926b2122365db642a31bc'
 
 // a list of tokens by chain
 type ChainTokenList = {
