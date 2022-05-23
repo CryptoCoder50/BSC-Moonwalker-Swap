@@ -4,7 +4,7 @@ const config: MenuEntry[] = [
   {
     label: 'Home',
     icon: 'HomeIcon',
-    href: 'bsc-swap-frontend-gtzdhsuaz-cryptocoder50.vercel.app',
+    href: 'https://bsc-swap-frontend-gtzdhsuaz-cryptocoder50.vercel.app',
   },
   {
     label: 'Trade',
@@ -24,12 +24,12 @@ const config: MenuEntry[] = [
   {
     label: 'Farms',
     icon: 'FarmIcon',
-    href: 'bsc-swap-frontend-gtzdhsuaz-cryptocoder50.vercel.app/farms',
+    href: 'https://bsc-swap-frontend-gtzdhsuaz-cryptocoder50.vercel.app/farms',
    },
    {
     label: 'Pools',
     icon: 'PoolIcon',
-    href: 'bsc-swap-frontend-gtzdhsuaz-cryptocoder50.vercel.app/pools',
+    href: 'https://bsc-swap-frontend-gtzdhsuaz-cryptocoder50.vercel.app/pools',
    },
 
 
@@ -39,19 +39,19 @@ const config: MenuEntry[] = [
     items: [
       {
         label: 'Overview',
-        href: 'bsc-swap-info-grte2j46w-cryptocoder50.vercel.app',
+        href: 'https://bsc-swap-info-grte2j46w-cryptocoder50.vercel.app',
       },
       {
         label: 'Tokens',
-        href: 'bsc-swap-info-grte2j46w-cryptocoder50.vercel.app/tokens',
+        href: 'https://bsc-swap-info-grte2j46w-cryptocoder50.vercel.app/tokens',
       },
       {
         label: 'Pairs',
-        href: 'bsc-swap-info-grte2j46w-cryptocoder50.vercel.app/pairs',
+        href: 'https://bsc-swap-info-grte2j46w-cryptocoder50.vercel.app/pairs',
       },
       {
         label: 'Accounts',
-        href: 'bsc-swap-info-grte2j46w-cryptocoder50.vercel.app/accounts',
+        href: 'https://bsc-swap-info-grte2j46w-cryptocoder50.vercel.app/accounts',
       },
     ],
   },
