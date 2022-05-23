@@ -4,7 +4,7 @@ const config: MenuEntry[] = [
   {
     label: 'Home',
     icon: 'HomeIcon',
-    href: 'https://bsc-swap-frontend-gtzdhsuaz-cryptocoder50.vercel.app',
+    href: 'https://moon-walker-swap-front-end-main.vercel.app/',
   },
   {
     label: 'Trade',
@@ -24,12 +24,12 @@ const config: MenuEntry[] = [
   {
     label: 'Farms',
     icon: 'FarmIcon',
-    href: 'https://bsc-swap-frontend-gtzdhsuaz-cryptocoder50.vercel.app/farms',
+    href: 'https://moon-walker-swap-front-end-main.vercel.app/farms',
    },
    {
     label: 'Pools',
     icon: 'PoolIcon',
-    href: 'https://bsc-swap-frontend-gtzdhsuaz-cryptocoder50.vercel.app/pools',
+    href: 'https://moon-walker-swap-front-end-main.vercel.app//pools',
    },
 
 
