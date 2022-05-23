@@ -4,7 +4,7 @@ const config: MenuEntry[] = [
   {
     label: 'Home',
     icon: 'HomeIcon',
-    href: 'https://bsc-home.moonwalker.network',
+    href: 'bsc-swap-frontend-gtzdhsuaz-cryptocoder50.vercel.app',
   },
   {
     label: 'Trade',
@@ -24,12 +24,12 @@ const config: MenuEntry[] = [
   {
     label: 'Farms',
     icon: 'FarmIcon',
-    href: 'https://bsc-home.moonwalker.network/farms',
+    href: 'bsc-swap-frontend-gtzdhsuaz-cryptocoder50.vercel.app/farms',
    },
    {
     label: 'Pools',
     icon: 'PoolIcon',
-    href: 'https://bsc-home.moonwalker.network/pools',
+    href: 'bsc-swap-frontend-gtzdhsuaz-cryptocoder50.vercel.app/pools',
    },
 
 
@@ -39,19 +39,19 @@ const config: MenuEntry[] = [
     items: [
       {
         label: 'Overview',
-        href: 'https://bsc-info.moonwalker.network',
+        href: 'bsc-swap-info-grte2j46w-cryptocoder50.vercel.app',
       },
       {
         label: 'Tokens',
-        href: 'https://bsc-info.moonwalker.network/tokens',
+        href: 'bsc-swap-info-grte2j46w-cryptocoder50.vercel.app/tokens',
       },
       {
         label: 'Pairs',
-        href: 'https://bsc-info.moonwalker.network/pairs',
+        href: 'bsc-swap-info-grte2j46w-cryptocoder50.vercel.app/pairs',
       },
       {
         label: 'Accounts',
-        href: 'https://bsc-info.moonwalker.network/accounts',
+        href: 'bsc-swap-info-grte2j46w-cryptocoder50.vercel.app/accounts',
       },
     ],
   },
@@ -62,7 +62,7 @@ const config: MenuEntry[] = [
     items: [
       {
         label: 'Github',
-        href: 'https://github.com/MoonwalkerSwap',
+        href: 'https://github.com/CryptoCoder50',
       },
       {
         label: 'Docs',
