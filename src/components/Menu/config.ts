@@ -29,7 +29,7 @@ const config: MenuEntry[] = [
    {
     label: 'Pools',
     icon: 'PoolIcon',
-    href: 'https://moon-walker-swap-front-end-main.vercel.app//pools',
+    href: 'https://moon-walker-swap-front-end-main.vercel.app/pools',
    },
 
 
