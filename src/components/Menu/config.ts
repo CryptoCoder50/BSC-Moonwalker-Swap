@@ -39,19 +39,19 @@ const config: MenuEntry[] = [
     items: [
       {
         label: 'Overview',
-        href: 'https://bsc-swap-info-grte2j46w-cryptocoder50.vercel.app',
+        href: 'https://moon-walker-swap-info-main.vercel.app',
       },
       {
         label: 'Tokens',
-        href: 'https://bsc-swap-info-grte2j46w-cryptocoder50.vercel.app/tokens',
+        href: 'https://moon-walker-swap-info-main.vercel.app/tokens',
       },
       {
         label: 'Pairs',
-        href: 'https://bsc-swap-info-grte2j46w-cryptocoder50.vercel.app/pairs',
+        href: 'https://moon-walker-swap-info-main.vercel.app/pairs',
       },
       {
         label: 'Accounts',
-        href: 'https://bsc-swap-info-grte2j46w-cryptocoder50.vercel.app/accounts',
+        href: 'https://moon-walker-swap-info-main.vercel.app/accounts',
       },
     ],
   },
